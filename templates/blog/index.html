@@ -1,0 +1,20 @@
+{% extends 'base/base.html' %}
+
+{% block title %}{{ block.super }} Blog{% endblock %}
+
+{% block content %}
+    <div class="navbar-spacer">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% for entry in entries %}
+                    {% include "blog/single_post.html" with entry=entry %}
+                {% endfor %}
+            </div>
+
+            {% include "blog/right_sidebar.html" %}
+        </div>
+    </div>
+{% endblock %}

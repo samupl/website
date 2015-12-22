@@ -1,0 +1,9 @@
+{% extends "projects/thumbnails/base.html" %}
+
+
+{% load static %}
+
+
+{% block content %}
+    <img data-toggle="modal" data-title="Finance CRM" data-url="{% url 'pages:project_modal' 'finance' %}" data-target="#modal-projects" class="img-circle img-responsive" src="{% static 'projects/finance.png' %}" alt="">
+{% endblock %}

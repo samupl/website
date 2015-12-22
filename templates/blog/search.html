@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %}
+
+{% load i18n %}
+{% load bootstrap3 %}
+
+{% block title %}{{ entry.title }} &raquo; {{ block.super }} Blog{% endblock %}
+
+
+{% block content %}
+    <div class="navbar-spacer">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>{% trans 'Search results' %}: {{ keyword }}</h2>
+                <hr>
+                <p>{% trans 'Total posts found' %}: {{ entries.count }}</p>
+                <hr>
+
+                {% for entry in entries %}
+                    <h4>
+                        <a href="{{ entry.get_absolute_url }}">
+                            {{ entry.title }}
+                        </a>
+                        <small class="pull-right text-right">
+                            <i class="fa fa-comments-o"></i>
+                            {% if entry.comment_count == 0 %} {% trans "No comments so far" %}
+                            {% elif entry.comment_count == 1 %} 1 {% trans "Comment" %}
+                            {% else %} {{ entry.comment_count }} {% trans "Comments" %}
+                            {% endif %}
+                        </small>
+                    </h4>
+
+                {% endfor %}
+            </div>
+
+            {% include "blog/right_sidebar.html" %}
+        </div>
+    </div>
+{% endblock %}

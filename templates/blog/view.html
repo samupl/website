@@ -1,0 +1,59 @@
+{% extends 'base/base.html' %}
+
+{% load i18n %}
+{% load bootstrap3 %}
+
+{% block title %}{{ entry.title }} &raquo; {{ block.super }} Blog{% endblock %}
+
+
+{% block content %}
+    <div class="navbar-spacer">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                {% include "blog/single_post.html" with entry=entry hide_count=True show_labels=True %}
+                <br>
+
+                <form id="comment-form" class="ajax-form" method="POST" action="{% url 'blog:comment' entry.id entry.slug %}">
+                    <div class="ajax-form-ok alert alert-success hide">
+                        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                        <p>{% trans "Your comment has been posted succesfully. Scroll down to see it." %}</p>
+                    </div>
+                    {% csrf_token %}
+                    <div class="well">
+                        <h4>{% trans "Leave a comment" %}</h4>
+                        {% bootstrap_form form layout='inline' %}
+                        <button type="submit" class="btn btn-primary">{% trans "Submit" %}</button>
+                    </div>
+                </form>
+
+                <hr>
+
+                <h4>
+                    <i class="fa fa-comments-o"></i>
+                    {% if entry.comment_count == 0 %} {% trans "No comments so far" %}
+                    {% elif entry.comment_count == 1 %} 1 {% trans "Comment" %}
+                    {% else %} {{ entry.comment_count }} {% trans "Comments" %}
+                    {% endif %}
+                </h4>
+
+                <div id="comments" class="ajax-load-comments" data-url="{% url 'blog:view_comments' entry.id entry.slug %}">
+                </div>
+
+                <script type="text/javascript">
+                    window.onload = function() {
+                        $("#comment-form").on('ajax-form:success', function() {
+                            $(".ajax-load-comments").comments();
+                        });
+                    }
+                </script>
+            </div>
+
+            {% include "blog/right_sidebar.html" %}
+        </div>
+    </div>
+{% endblock %}

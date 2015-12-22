@@ -1,0 +1,39 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+    <header id="top" data-title="Home">
+        <div class="banner">
+            <div class="container">
+                <div class="row">
+
+                    <div class="col-md-5">
+                        <img class="img-circle img-responsive" alt="Me" src="{% static 'me.jpg' %}">
+                    </div>
+
+                    <div class="col-md-6 desc">
+                        <h2><i class="fa fa-fw fa-server"></i> System administrator</h2>
+
+                        <p>FreeBSD & Linux, Apache, Nginx, high availability, ansible automation, optimization.</p>
+
+                        <h2><i class="fa fa-fw fa-file-code-o"></i> Software developer</h2>
+
+                        <p>Backend & frontend, Python+Django, REST APIs, Middleware, scalable solutions, HTML5,
+                            jQuery.</p>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+        {% include "pages/captions/about_me.html" %}
+        {% include "pages/captions/projects.html" %}
+        {% include "pages/captions/contact.html" with form=form %}
+
+    </div>
+{% endblock %}

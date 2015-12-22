@@ -1,0 +1,16 @@
+{% load i18n %}
+
+<div class="col-md-4">
+    <div class="well">
+        <form action="{% url 'blog:search' %}">
+            <input type="search" name="q" class="form-control" placeholder="{% trans 'Search on this blog...' %}">
+        </form>
+    </div>
+
+    <div class="well">
+        <h3>{% trans "Categories" %}</h3>
+        <div class="list-group" id="categories" data-url="{% url 'blog:categories' %}"
+             data-category-url="{% url 'blog:category' '__replace__' %}">
+        </div>
+    </div>
+</div>

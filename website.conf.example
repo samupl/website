@@ -1,0 +1,28 @@
+[database]
+engine      =           django.db.backends.sqlite3
+name        =           db.sqlite3
+user        =           null
+password    =           null
+host        =           null
+port        =           null
+
+[secret]
+key         =           example secret key
+
+[debug]
+debug       =           false
+
+[captcha]
+test_mode   =           false
+
+[contact_form]
+rcpt        =           rcpt@example.com
+subj_prefix =           [website, contact form]
+from_email  =           example@example.com
+
+[smtp]
+host        =           mail.example.com
+user        =           example@example.com
+password    =           password
+ssl         =           true
+port        =           465

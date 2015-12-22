@@ -1,0 +1,60 @@
+@import "variables";
+
+header {
+  div.banner {
+    color: #fff;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+    padding-top: 50px;
+    margin-top: 50px;
+    min-height: 400px;
+    width: 100%;
+    background: #1976D2 url('/static/img/banner.jpg') fixed;
+    @media (max-width: $screen-sm) {
+      min-height: 700px;
+    }
+  }
+
+  .circle {
+    border-radius: 50%;
+  }
+
+  .img-circle {
+    width: 300px;
+    height: 300px;
+    margin-top: 30px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+
+    @media (max-width: $screen-md) {
+      margin: 0 auto;
+    }
+  }
+
+  .desc {
+    @media (max-width: $screen-md) {
+      text-align: center;
+    }
+
+    p {
+      @media (min-width: $screen-md) { padding-left: 80px; }
+      margin-bottom: 60px;
+    }
+
+    h2:first-child {
+      padding-top: 20px;
+    }
+
+    h2 {
+      @media (min-width: $screen-md) { padding-left: 80px; }
+
+      > i {
+        @media (min-width: $screen-md) {
+          position: absolute;
+          font-size: 60px !important;
+          margin-left: -80px;
+          margin-top: 4px;
+        }
+      }
+    }
+  }
+
+}

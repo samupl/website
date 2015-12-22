@@ -1,0 +1,91 @@
+@import "variables";
+
+div.bg-grey {
+    background: #F4F4F4;
+}
+
+div.wrapper {
+    div.container {
+
+        > h3 {
+          margin-top: 0px;
+          text-transform: uppercase;
+          text-align: center;
+          margin-bottom: 20px;
+        }
+
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+}
+
+.ajax-form {
+  label {
+    display: block;
+  }
+
+  span.label {
+    margin-top: 4px;
+    font-size: 13px;
+  }
+}
+
+#projects {
+  .img-circle {
+    margin-top: 20px;
+    box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  }
+
+  .img-circle:hover {
+    cursor: pointer;
+  }
+}
+
+.navbar-spacer {
+    height: 80px;
+}
+
+img.captcha {
+    float: left;
+    display: table;
+    border: 1px solid #adadad;
+}
+
+input#id_captcha_1 {
+    float: right;
+    width: 74.50%;
+    display: table;
+}
+
+form.ajax-form {
+    div.form-group {
+        display: table !important;
+        width: 100%;
+    }
+}
+
+h4 small {
+    font-size: 70%;
+    margin-left: 12px;
+}
+
+span.error_message {
+    margin-top: -27px !important;
+    margin-right: 8px;
+}
+
+#comments {
+    margin-bottom: 20px;
+}
+
+.color-facebook {
+  color: $facebook;
+}
+
+.color-twitter {
+  color: $twitter;
+}
+
+.color-linkedin {
+  color: $linkedin;
+}

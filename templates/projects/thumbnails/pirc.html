@@ -1,0 +1,9 @@
+{% extends "projects/thumbnails/base.html" %}
+
+
+{% load static %}
+
+
+{% block content %}
+    <img data-toggle="modal" data-title="PIRC.PL" data-url="{% url 'pages:project_modal' 'pirc' %}" data-target="#modal-projects" class="img-circle img-responsive" src="{% static 'projects/pirc.png' %}" alt="">
+{% endblock %}

@@ -1,0 +1,32 @@
+{% load i18n %}
+
+<article>
+    <h2><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h2>
+    <hr>
+        <i class="fa fa-clock-o"></i> Posted on {{ entry.date }}
+    <hr>
+
+    {{ entry.content|safe }}
+
+    <div class="entry-footer">
+        <hr>
+        {% if not hide_count %}
+            <small class="pull-right text-right">
+                <i class="fa fa-comments-o"></i>
+                {% if entry.comment_count == 0 %} {% trans "No comments so far" %}
+                {% elif entry.comment_count == 1 %} 1 {% trans "Comment" %}
+                {% else %} {{ entry.comment_count }} {% trans "Comments" %}
+                {% endif %}
+            </small>
+        {% endif %}
+        {% if show_labels %}
+            <small class="pull-right text-right">
+            {% trans 'Tags' %}:
+            {% for label in entry.label_set.all %}
+                {{ label.label }}{% if not forloop.last %}, {% endif %}
+            {% endfor %}
+            </small>
+            <br>
+        {% endif %}
+    </div>
+</article>

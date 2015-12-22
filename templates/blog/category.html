@@ -1,0 +1,41 @@
+{% extends 'base/base.html' %}
+
+{% load i18n %}
+{% load bootstrap3 %}
+
+{% block title %}{{ entry.title }} &raquo; {{ block.super }} Blog{% endblock %}
+
+
+{% block content %}
+    <div class="navbar-spacer">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h2>{% trans 'Category' %}: {{ category_name }}</h2>
+                <hr>
+                <p>{% trans 'Total posts in this category' %}: {{ labels.count }}</p>
+                <hr>
+
+                {% for label in labels %}
+                    <h4>
+                        <a href="{{ label.post.get_absolute_url }}">
+                            {{ label.post.title }}
+                        </a>
+                        <small class="pull-right text-right">
+                            <i class="fa fa-comments-o"></i>
+                            {% if label.post.comment_count == 0 %} {% trans "No comments so far" %}
+                            {% elif label.post.comment_count == 1 %} 1 {% trans "Comment" %}
+                            {% else %} {{ label.post.comment_count }} {% trans "Comments" %}
+                            {% endif %}
+                        </small>
+                    </h4>
+
+                {% endfor %}
+            </div>
+
+            {% include "blog/right_sidebar.html" %}
+        </div>
+    </div>
+{% endblock %}

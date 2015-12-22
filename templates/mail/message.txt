@@ -1,0 +1,10 @@
+{{ message }}
+
+--
+This message has been sent using a contact form on your website.
+
+Request user information:
+IP Address:     {{ request.META.REMOTE_ADDR }}
+Host:           {{ request.META.REMOTE_HOST }}
+User-Agent:     {{ request.META.HTTP_USER_AGENT }}
+Referrer:       {{ request.META.HTTP_REFERER }}

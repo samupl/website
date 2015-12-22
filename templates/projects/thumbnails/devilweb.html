@@ -1,0 +1,9 @@
+{% extends "projects/thumbnails/base.html" %}
+
+
+{% load static %}
+
+
+{% block content %}
+    <img data-toggle="modal" data-title="DevilWEB2" data-url="{% url 'pages:project_modal' 'devilweb' %}" data-target="#modal-projects" class="img-circle img-responsive" src="{% static 'projects/devilweb2.png' %}" alt="">
+{% endblock %}

@@ -1,0 +1,40 @@
+{% load bootstrap3 %}
+{% load hexencoder %}
+{% load i18n %}
+
+<div class="container" id="contact" data-title="Contact">
+    <h3>Contact</h3>
+    <div class="row">
+        <div class="col-md-6">
+            <p>You can contact me using the form on the right, or by sending me an e-mail directly. I always try to respond to e-mails as soon as possible. You can also find me on a variety of social networks, which are listed below.</p>
+
+            <p><i class="fa fa-2x fa-fw fa-linkedin-square color-linkedin"></i> <a href="https://pl.linkedin.com/in/jakubszafranski">linkedin.com/jakubszafranski</a></p>
+            <p><i class="fa fa-2x fa-fw fa-facebook-official color-facebook"></i> <a href="https://www.facebook.com/szafranskijakub">facebook.com/szafranskijakub</a></p>
+            <p><i class="fa fa-2x fa-fw fa-twitter-square color-twitter"></i> <a href="https://twitter.com/samu_pl">twitter.com/samupl</a></p>
+
+            <br>
+            <p>You can also contact me directly, or use the form on the right.</p>
+            <p><i class="fa fa-2x fa-fw fa-envelope"></i> {% convert_hex_js '<a href="mailto:kontakt@samu.pl">kontakt@samu.pl</a>' %}</p>
+        </div>
+
+        <div class="col-md-6">
+            <form id="contact-form" class="ajax-form" method="POST" action="{% url 'contact:form' %}">
+                <div class="ajax-form-ok alert alert-success hide">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                    <p>Your message has been sent succesfully. I will contact you back as soon as possible.</p>
+                </div>
+                {% csrf_token %}
+                {% bootstrap_form form layout='horizontal' %}
+                <div class="form-group">
+                    <div class="col-sm-offset-3 col-sm-9">
+                        <button class="btn btn-primary" type="submit" onclick="return false">
+                            <i class="fa fa-circle-o-notch fa-spin spinner" style="display: none;"></i> {% trans 'Send' %}
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
