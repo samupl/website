@@ -48,6 +48,7 @@ INSTALLED_APPS = (
     'apps.pages',
     'apps.contact',
     'apps.blog',
+    'apps.keybase',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -143,6 +144,7 @@ EMAIL_PORT = config.getint('smtp', 'port')
 SERVER_EMAIL = 'finance-django@admin.net.pl'
 
 
-SECURE_SSL_REDIRECT = True
-SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+if not DEBUG:
+    SECURE_SSL_REDIRECT = True
+    SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 

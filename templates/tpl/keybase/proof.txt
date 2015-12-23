@@ -1,0 +1,74 @@
+==================================================================
+https://keybase.io/samu
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://samu.pl
+  * I am samu (https://keybase.io/samu) on keybase.
+  * I have a public key with fingerprint CA73 97E9 411C FADF 5CA9  9C15 CE48 1B9F CA80 9A4F
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "0101420b269a4098d00cb000fba3bae7ea98c9f9b6d09f4338183a4050800b295e3b0a",
+            "fingerprint": "ca7397e9411cfadf5ca99c15ce481b9fca809a4f",
+            "host": "keybase.io",
+            "key_id": "ce481b9fca809a4f",
+            "kid": "0101420b269a4098d00cb000fba3bae7ea98c9f9b6d09f4338183a4050800b295e3b0a",
+            "uid": "c424b7e200fbd655159ed73596a83500",
+            "username": "samu"
+        },
+        "revoke": {
+            "sig_ids": [
+                "04519e8c602470a71d88daa550937cb0205c3f202f4de2ff426232b8e340275c0f"
+            ]
+        },
+        "service": {
+            "hostname": "samu.pl",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1450870842,
+    "expire_in": 157680000,
+    "prev": "a8868c713b1595481e195c658c9d1db93ce90e49be805884885dd0e50af240d6",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.49
+Comment: https://keybase.io/crypto
+
+yMJpAnicrVJraBRHHL9EjTaiKOIXi40Oiq054+zszO7MSqGezyItgrVqNF5mZ2aT
+zSW35+3dJacGA0J8fdDgA1MfWB9VWl/4gAjiG5RWGgj9pJRqCMVaVBTSgo/gbGqh
+H/zYT39m+L3mN/9bo4bEykt6xs2dlzg5albJT9cf52Nfr93srANuIItAz5QaHKpR
+qjCXTPkSOAAa0MAIushiHENGJYTChRB6LjddrmzFGRXMY64lIfOwaVKDmhpJIIWa
+xYgyXchBHHh+uk5lM1k/ndOygtsmsxXDhiE8Lj0iOGPCIEJharjME5xCbehpYn0Q
+RgwdzuWhqvIDfacPycF478H/z7nz//hghF1boUhAWoQYhClpm4RZnJoEwggYqmya
+NymNDnlTHrTGQVYVgpSKOg39Oh04BM5KADExmKLCggjbkNuGpFRyTghkpq0zIkiE
+6SGIPCwV8jyMLGQilyoTQ2QTAT1Qo7W1W8EXg+JRQ/9xrso06jiZbJALRNCoL+tz
+uUzoRIFyxUyEalZu8h0/6fppqb9GMwoqG/pBGjiGRoqcHwkaWBdiQ4pRHKiWjJ9V
+ST9CENvSPUEY+aiCluSUWlTYhunqaoj+FGUwIiyiS5aGdJkpFIMKM1dRSCjFlBIp
+oSKQewhDaYHoRWvSAXCwjsnrorf4dWmey2cVaL1xbdXQWEl5rGxYabSysfIPxvy7
+yFu2DX/zYWXhQc+079PTJyaGPNvU1v93wrh34X4RPNrx+bKubccOTJx/8Mrkmr7m
+J89fpiqK7bdHvJjSuep118b5S9nVNU1TrjT8tv+HBcd2fbdh5vHaP+Y4q7v3nVux
+pHpG2Zftd16Obeg5X5nv+2V7Q/ei2bs7zrQ5pbcOVHdOWncjM37l4zNdW05Un9pb
+GnbsOT3w7Ku7/r2dH8162t0/bevHD48u2/v0+QvnzvmfF68faD95dlxfhVryRaVX
+PHS8ueaTw4f3hBWvUhWLW60Tn5aX1XY5I+N/Tfg9Ef5au/+z3pkt939E/UcWPrk5
+7GH8244xC/ruXmx+0Nv5J+pNXNzR9s3yC9euDoyeWnV5Rn3Lo0tvAaxyWcA=
+=VTHw
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/samu
+
+==================================================================
