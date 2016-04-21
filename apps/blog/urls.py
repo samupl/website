@@ -1,4 +1,6 @@
 from django.conf.urls import url
+
+from .feeds import LatestEntriesFeed
 from . import views
 
 urlpatterns = [
@@ -9,4 +11,5 @@ urlpatterns = [
     url(r'^([0-9]+)/([^/]+)/view_comments', views.view_comments, name='view_comments'),
     url(r'^([0-9]+)/([^/]+)/comment$', views.comment, name='comment'),
     url(r'^categories.json$', views.categories, name='categories'),
+    url(r'^feed$', LatestEntriesFeed(), name='feed'),
 ]
