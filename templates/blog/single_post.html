@@ -1,4 +1,6 @@
 {% load i18n %}
+{% load static %}
+{% load full_uri %}
 
 <article>
     <h2><a href="{{ entry.get_absolute_url }}">{{ entry.title }}</a></h2>
@@ -9,6 +11,20 @@
     {{ entry.content|safe }}
 
     <div class="entry-footer">
+        <hr>
+        {% with entry.get_absolute_url|full_uri:request|urlencode:"" as share_entry_uri %}
+            {% with entry.title|urlencode as share_entry_title %}
+                <div class="share-buttons">
+                  <div><a href="https://www.facebook.com/sharer/sharer.php?u={{ share_entry_uri }}&t={{ share_entry_title }}" title="Share on Facebook" target="_blank"><img src="{% static 'img/flat_web_icon_set/color/Facebook.png' %}"></a></div>
+                  <div><a href="https://twitter.com/intent/tweet?source={{ share_entry_uri }}&text={{ share_entry_title }}:%20{{ share_entry_uri }}" target="_blank" title="Tweet"><img src="{% static 'img/flat_web_icon_set/color/Twitter.png' %}"></a></div>
+                  <div><a href="https://plus.google.com/share?url={{ share_entry_uri }}" target="_blank" title="Share on Google+"><img src="{% static 'img/flat_web_icon_set/color/Google+.png' %}"></a></div>
+                  <div><a href="http://www.reddit.com/submit?url={{ share_entry_uri }}&title={{ share_entry_title }}" target="_blank" title="Submit to Reddit"><img src="{% static 'img/flat_web_icon_set/color/Reddit.png' %}"></a></div>
+                  <div><a href="http://www.linkedin.com/shareArticle?mini=true&url={{ share_entry_uri }}&title={{ share_entry_title }}&summary={{ share_entry_title }}&source={{ share_entry_uri }}" target="_blank" title="Share on LinkedIn"><img src="{% static 'img/flat_web_icon_set/color/LinkedIn.png' %}"></a></div>
+                  <div><a href="mailto:?subject={{ share_entry_title }}&body={{ share_entry_title }}:%20{{ share_entry_uri }}" target="_blank" title="Email"><img src="{% static 'img/flat_web_icon_set/color/Email.png' %}"></a></div>
+                </div>
+            {% endwith %}
+        {% endwith %}
+
         <hr>
         {% if not hide_count %}
             <small class="pull-right text-right">
@@ -29,4 +45,5 @@
             <br>
         {% endif %}
     </div>
+
 </article>

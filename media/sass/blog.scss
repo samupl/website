@@ -8,3 +8,34 @@ article {
     }
 
 }
+
+.share-buttons {
+    display: table;
+    text-align: center;
+    margin: 15px auto 0;
+
+    > div {
+      display: inline;
+
+        img {
+            margin-left: 5px;
+            margin-right: 5px;
+            opacity: 0.2;
+            transition: opacity 0.2s ease-in-out;
+
+            &:hover {
+                opacity: 1 !important;
+                transition: opacity 0.2s ease-in-out;
+            }
+        }
+    }
+
+    &:hover {
+        > div {
+            img {
+                opacity: 0.5;
+                transition: opacity 0.2s ease-in-out;
+            }
+        }
+    }
+}

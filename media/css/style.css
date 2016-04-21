@@ -453,4 +453,22 @@ article .entry-footer {
   article .entry-footer hr {
     margin-bottom: 0; }
 
+.share-buttons {
+  display: table;
+  text-align: center;
+  margin: 15px auto 0; }
+  .share-buttons > div {
+    display: inline; }
+    .share-buttons > div img {
+      margin-left: 5px;
+      margin-right: 5px;
+      opacity: 0.2;
+      transition: opacity 0.2s ease-in-out; }
+      .share-buttons > div img:hover {
+        opacity: 1 !important;
+        transition: opacity 0.2s ease-in-out; }
+  .share-buttons:hover > div img {
+    opacity: 0.5;
+    transition: opacity 0.2s ease-in-out; }
+
 /*# sourceMappingURL=style.css.map */
