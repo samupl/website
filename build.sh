@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 
+
 # Compile sass files
 scss media/sass/style.scss media/css/style.css
 
