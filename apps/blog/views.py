@@ -9,7 +9,7 @@ from apps.blog.models import Post, Comment, Label
 
 
 def home(request):
-    entries = Post.objects.all()
+    entries = Post.objects.all().order_by('-date')
     return render(request, 'blog/index.html', {
         'entries': entries
     })
