@@ -1,6 +1,6 @@
 {{ message }}
 
---
+-- 
 This message has been sent using a contact form on your website.
 
 Request user information:
