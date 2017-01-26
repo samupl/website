@@ -127,7 +127,7 @@ CAPTCHA_NOISE_FUNCTIONS = [
     'captcha.helpers.noise_dots'
 ]
 
-CAPTCHA_TEST_MODE = config.get('captcha', 'test_mode')
+CAPTCHA_TEST_MODE = config.getboolean('captcha', 'test_mode')
 CAPTCHA_LENGTH = 6
 
 # Contact form
