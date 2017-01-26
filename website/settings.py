@@ -28,7 +28,7 @@ SECRET_KEY = config.get('secret', 'key')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config.getboolean('debug', 'debug')
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['samu.pl']
 
 # Application definition
 
