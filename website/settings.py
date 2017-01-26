@@ -123,10 +123,12 @@ STATICFILES_DIRS = (
 STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 CAPTCHA_NOISE_FUNCTIONS = [
+    'captcha.helpers.noise_arcs',
     'captcha.helpers.noise_dots'
 ]
 
 CAPTCHA_TEST_MODE = config.get('captcha', 'test_mode')
+CAPTCHA_LENGTH = 6
 
 # Contact form
 CONTACT_FORM_RCPT = config.get('contact_form', 'rcpt')
