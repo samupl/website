@@ -1,5 +1,3 @@
-from captcha.helpers import captcha_image_url
-from captcha.models import CaptchaStore
 from django.db.models import Count
 from django.http import Http404, JsonResponse
 from django.shortcuts import render
@@ -75,8 +73,8 @@ def comment(request, post_id, post_slug):
         form = CommentForm()
 
     data = form.errors
-    data['__captcha_key'] = CaptchaStore.generate_key()
-    data['__captcha_image_src'] = captcha_image_url(data['__captcha_key'])
+    # data['__captcha_key'] = CaptchaStore.generate_key()
+    # data['__captcha_image_src'] = captcha_image_url(data['__captcha_key'])
     response = JsonResponse(data, status=status)
     return response
 

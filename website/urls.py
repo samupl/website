@@ -10,6 +10,5 @@ urlpatterns = [
     url(r'^blog/', include(apps.blog.urls, namespace='blog')),
     url(r'^contact', include(apps.contact.urls, namespace='contact')),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^captcha/', include('captcha.urls')),
     url(r'^\.well-known/keybase\.txt', 'apps.keybase.views.proof'),
 ]

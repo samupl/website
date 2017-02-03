@@ -13,7 +13,8 @@ key         =           example secret key
 debug       =           false
 
 [captcha]
-test_mode   =           false
+public_key  =           ...
+private_key =           ...
 
 [contact_form]
 rcpt        =           rcpt@example.com

@@ -127,8 +127,10 @@ CAPTCHA_NOISE_FUNCTIONS = [
     'captcha.helpers.noise_dots'
 ]
 
-CAPTCHA_TEST_MODE = config.getboolean('captcha', 'test_mode')
-CAPTCHA_LENGTH = 6
+RECAPTCHA_PUBLIC_KEY = config.get('captcha', 'public_key')
+RECAPTCHA_PRIVATE_KEY = config.get('captcha', 'private_key')
+NOCAPTCHA = True
+
 
 # Contact form
 CONTACT_FORM_RCPT = config.get('contact_form', 'rcpt')

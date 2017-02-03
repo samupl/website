@@ -1,7 +1,5 @@
 # -*- coding: utf-8 -*-
 
-from captcha.helpers import captcha_image_url
-from captcha.models import CaptchaStore
 from django.conf import settings
 from django.core.mail import EmailMessage
 from django.http import JsonResponse
@@ -39,7 +37,7 @@ def contact(request):
         form = ContactForm()
 
     data = form.errors
-    data['__captcha_key'] = CaptchaStore.generate_key()
-    data['__captcha_image_src'] = captcha_image_url(data['__captcha_key'])
+    # data['__captcha_key'] = CaptchaStore.generate_key()
+    # data['__captcha_image_src'] = captcha_image_url(data['__captcha_key'])
     response = JsonResponse(data, status=status)
     return response

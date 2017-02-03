@@ -1,12 +1,11 @@
-from captcha.fields import CaptchaField
+from captcha.fields import ReCaptchaField
 from django import forms
-from django.utils.translation import ugettext_lazy
 from apps.blog.models import Comment
 
 
 class CommentForm(forms.ModelForm):
 
-    captcha = CaptchaField()
+    captcha = ReCaptchaField()
 
     class Meta:
         model = Comment
